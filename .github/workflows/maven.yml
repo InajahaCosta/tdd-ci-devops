@@ -16,8 +16,8 @@ on:
 
 #descrevendo o que o piple vai fazer
 jobs:
-  build: #empacotando
-    runs-on: ubuntu-latest # sitema operacional para aplicação rodar em um servidor remoto
+  teste:
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3 #clona o repositorio
@@ -27,5 +27,5 @@ jobs:
           java-version: "17"
           distribution: "temurin"
           cache: maven
-      - name: Build with Maven
-        run: mvn clean install
+      - name: teste
+        run: mvn clean test site
